@@ -44,38 +44,38 @@ namespace _09_Portfolio
             Assert.AreEqual(5667, s.GetValue());
         }
 
-        //[TestMethod]
-        //public void CanUseMultiArgumentConstructor()
-        //{
-        //    Stock stockYHOO = new Stock("YHOO", 43.33, 60);
+        [TestMethod]
+        public void CanUseMultiArgumentConstructor()
+        {
+            Stock stockYHOO = new Stock("YHOO", 43.33, 60);
 
-        //    Assert.AreEqual("YHOO", stockYHOO.Symbol);
-        //    Assert.AreEqual(43.33, stockYHOO.PricePerShare);
-        //    Assert.AreEqual(60, stockYHOO.NumShares);
-        //    Assert.AreEqual(43.33 * 60, stockYHOO.GetValue());
-        //}
+            Assert.AreEqual("YHOO", stockYHOO.Symbol);
+            Assert.AreEqual(43.33, stockYHOO.PricePerShare);
+            Assert.AreEqual(60, stockYHOO.NumShares);
+            Assert.AreEqual(43.33 * 60, stockYHOO.GetValue());
+        }
 
-        //[TestMethod]
-        //public void CanCreateMultipleInstances()
-        //{
-        //    Stock stockYHOO = new Stock("YHOO", 10, 100);
-        //    Stock stockMSFT = new Stock("MSFT", 22, 300);
-        //    Assert.AreEqual(1000, stockYHOO.GetValue());
-        //    Assert.AreEqual(6600, stockMSFT.GetValue());
-        //}
+        [TestMethod]
+        public void CanCreateMultipleInstances()
+        {
+            Stock stockYHOO = new Stock("YHOO", 10, 100);
+            Stock stockMSFT = new Stock("MSFT", 22, 300);
+            Assert.AreEqual(1000, stockYHOO.GetValue());
+            Assert.AreEqual(6600, stockMSFT.GetValue());
+        }
 
-        //[TestMethod]
-        //public void CanCalculateTotalValue()
-        //{
-        //    Stock stockHP = new Stock("HPQ", 60.03, 120);
-        //    Stock stockIBM = new Stock("IBM", 32.11, 50);
+        [TestMethod]
+        public void CanCalculateTotalValue()
+        {
+            Stock stockHP = new Stock("HPQ", 60.03, 120);
+            Stock stockIBM = new Stock("IBM", 32.11, 50);
 
-        //   Stock[] stocks = new Stock[2];
-        //    stocks[0] = stockHP;
-        //    stocks[1] = stockIBM;
+            Stock[] stocks = new Stock[2];
+            stocks[0] = stockHP;
+            stocks[1] = stockIBM;
 
-        //    Assert.AreEqual(8809.1, Stock.TotalValue(stocks));
-        //}
+            Assert.AreEqual(8809.1, Stock.TotalValue(stocks));
+        }
 
         //[TestMethod]
         //public void CanCreateToString()

@@ -2,20 +2,38 @@
 
 namespace _09_Portfolio
 {
-    internal class Stock
+    public class Stock
     {
+        private string v1;
+        private double v2;
+        private int v3;
+
         public Stock()
         {
             
         }
 
-        public int NumShares { get; internal set; }
+        public Stock(string Symbol, double PricePerShare, double NumShares)
+        {
+            this.Symbol = Symbol;
+            this.PricePerShare = PricePerShare;
+            this.NumShares = NumShares;
+        }
+
+        public double NumShares { get; internal set; }
         public double PricePerShare { get; internal set; }
         public string Symbol { get; internal set; }
 
-        internal int GetValue()
+        public double GetValue()
         {
-            throw new NotImplementedException();
+            return NumShares * PricePerShare;
+        }
+
+        public static double TotalValue(Stock[] stocks)
+        {
+            double x = stocks[0].NumShares * stocks[0].PricePerShare;
+            double y = stocks[1].NumShares * stocks[1].PricePerShare;
+            return x + y;
         }
     }
 }
