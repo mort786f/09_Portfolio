@@ -35,5 +35,14 @@ namespace _09_Portfolio
             double y = stocks[1].NumShares * stocks[1].PricePerShare;
             return x + y;
         }
+        public override string ToString()
+        {
+            return "Stock[symbol=" + Symbol + ",pricePerShare=" + PricePerShare + ",numShares=" + NumShares + "]";
+        }
+        public override bool Equals(object obj)
+        {
+            Stock abc = (Stock)obj;
+            return (this.Symbol == abc.Symbol && this.NumShares == abc.NumShares && this.PricePerShare == abc.PricePerShare);
+        }
     }
 }
